@@ -16,22 +16,13 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>nexus-snapshot</id>
-            <url>http://localhost:8081/repository/nexus-snapshot/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>nexus-releases</id>
-            <url>http://localhost:8081/repository/nexus-releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>LATEST</version>
+        </dependency>
+    </dependencies>
 
     <distributionManagement>
         <snapshotRepository>
