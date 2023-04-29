@@ -6,7 +6,7 @@
 
     <groupId>guru.springframework</groupId>
     <artifactId>mb2g-testing</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,7 +29,7 @@
     <distributionManagement>
         <repository>
             <id>packagecloud.releases</id>
-            <url>packagecloud+https://packagecloud.io/ddataylor/releases</url>
+            <url>packagecloud+https://packagecloud.io/ddataylor/release</url>
         </repository>
         <snapshotRepository>
             <id>packagecloud.snapshots</id>
