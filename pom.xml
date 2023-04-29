@@ -15,4 +15,25 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>io.packagecloud.maven.wagon</groupId>
+                <artifactId>maven-packagecloud-wagon</artifactId>
+                <version>0.0.6</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>packagecloud.releases</id>
+            <url>packagecloud+https://packagecloud.io/ddataylor/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>packagecloud.snapshots</id>
+            <url>packagecloud+https://packagecloud.io/ddataylor/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
