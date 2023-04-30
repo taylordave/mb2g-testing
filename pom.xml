@@ -15,6 +15,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <junit.version>5.9.2</junit.version>
+        <TEST_HOST>localhost</TEST_HOST>
     </properties>
 
     <dependencies>
@@ -40,10 +41,25 @@
                 <version>2.22.0</version>
                 <configuration>
                     <environmentVariables>
-                        <TEST_HOST>test.example.com</TEST_HOST>
+                        <TEST_HOST>${TEST_HOST}</TEST_HOST>
                     </environmentVariables>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <TEST_HOST>test.example.com</TEST_HOST>
+            </properties>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <TEST_HOST>uat.example.com</TEST_HOST>
+            </properties>
+        </profile>
+    </profiles>
 </project>
